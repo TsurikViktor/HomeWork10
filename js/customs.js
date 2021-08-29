@@ -169,27 +169,18 @@ const menu = [
   },
 ]
 
-
-
-
 function printMenu(menu, level = 0) {
   let res = ``;
   for(var i = 0; i < menu.length; i++){
 
-    if (menu[i] === [] && type === PRODUCT ) {
+    if (menu[i].el === `menu` ) {
       console.log(`  -`+ menu[i].name);
       printMenu(menu);
     }
-    //else {
-    //if ( menu[i].type === CATEGORY) {
-    //  printMenu(menu);
-    //  console.log(`*  -`+ menu[i].name);
-    //  if ( menu[i].type === PRODUCT) {console.log(`   -`+ menu[i].name)};
-    //}
-    //
+
     console.log(`*`+ menu[i].name)
   }
-  return res = res + menu[i]
+  return res
 };
 
 printMenu(menu);
